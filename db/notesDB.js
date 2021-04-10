@@ -1,10 +1,7 @@
-const { text } = require('express');
 const fs = require('fs');
 const util = require('util');
-//const uuidv4 = require('uuid/v4');
-
 const { v4: uuidv4 } = require('uuid');
-// uuidv4();
+
 
 // From 09-NodeJS - Activity 28
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -50,6 +47,8 @@ class NotesDB {
     const updatedNotesStr = JSON.stringify(updatedNotes, null, 2);
 
     await writeFileAsync(dbFile, updatedNotesStr);
+
+    return updatedNotes;
   }
 
 }
