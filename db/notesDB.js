@@ -8,16 +8,26 @@ const readFileAsync = util.promisify(fs.readFile);
 class NotesDB {
 
   async getAllNotes() {
-
-    // Return the contents of 'data.csv' as a string in the variable "data"
-    // "utf8" encodes the raw buffer data in human-readable format
     const dbFile = 'db/db.json';
-    const notes = await readFileAsync(dbFile, "utf8");
+    let notes = [];
 
+    try {
+      // Returns the contents of the file as a string in the variable notes
+      // 'utf8' encodes the raw buffer data in human-readable format
+      const fileContents = await readFileAsync(dbFile, 'utf8');
+      
+      // parses the JSON into objects
+      notes = JSON.parse(fileContents);
+
+    } catch (err) {
+      console.log(err);
+    }
+
+    return notes;
   }
 
   async createNote() {
-    writeFileAsync(path, data);
+    //await writeFileAsync(path, data);
   }
 
   async deleteNote(id) {
