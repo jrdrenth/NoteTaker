@@ -29,7 +29,7 @@ router.post('/notes', async (req, res) => {
 
 
 // delete a note by its `id` value
-router.delete('/notes:id', async (req, res) => {
+router.delete('/notes/:id', async (req, res) => {
   try {
     const result = await notesDB.deleteNote(req.params.id);
 
