@@ -1,6 +1,22 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
+  {
+    "id": "c2376024-5e1e-41df-806e-0c3348de2d6b",
+    "title": "Walk the dog",
+    "text": "Make sure to walk him at least 30 minutes"
+  },
+  {
+    "id": "23005753-692a-4de7-8feb-36ab42ffc811",
+    "title": "Costco Trip",
+    "text": "Pickup groceries/supplies at Costco"
+  },
+  {
+    "id": "10647c36-2570-4083-bbc0-14e24ca88b96",
+    "title": "Change Oil",
+    "text": "Take the Honda in for an oil change and general maintenance"
+  },
+  {
+    "id": "94c2cdf7-e3ea-4ac3-b8ef-d11933e4ed59",
+    "title": "Update clocks",
+    "text": "Change the time on all the clocks for spring forward"
+  }
 ]
