@@ -1,14 +1,27 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Used to write and save notes",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrdrenth/NoteTaker.git"
+  },
+  "author": "John R. Drenth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrdrenth/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/jrdrenth/NoteTaker#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
