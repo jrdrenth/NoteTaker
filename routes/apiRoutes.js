@@ -5,7 +5,7 @@ const notesDB = new NotesDB();
 
 // ROUTING
 // find all notes
-router.get('/notes/', async (req, res) => {
+router.get('/notes', async (req, res) => {
   try {
     const notes = await notesDB.getAllNotes();
     res.status(200).json(notes);

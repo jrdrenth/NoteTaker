@@ -1,5 +1,10 @@
+const { text } = require('express');
 const fs = require('fs');
 const util = require('util');
+//const uuidv4 = require('uuid/v4');
+
+const { v4: uuidv4 } = require('uuid');
+// uuidv4();
 
 // From 09-NodeJS - Activity 28
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -24,17 +29,27 @@ class NotesDB {
       throw new Error('Neither the title nor the text can be blank');
     }
 
-    const prevNotes = await this.getAllNotes();
-    const newNotes = [...prevNotes, note];
-    await writeFileAsync(dbFile, newNotes);
+    const newNote = {
+      id: uuidv4(),
+      title: note.title,
+      text: note.text
+    }
 
-    return note;
+    const prevNotes = await this.getAllNotes();
+    const updatedNotes = [...prevNotes, newNote];
+    const updatedNotesStr = JSON.stringify(updatedNotes, null, 2);
+
+    await writeFileAsync(dbFile, updatedNotesStr);
+
+    return newNote;
   }
 
   async deleteNote(id) {
     const prevNotes = await this.getAllNotes();
-    const newNotes = prevNotes.filter((note) => note.id !== id);
-    await writeFileAsync(dbFile, newNotes);
+    const updatedNotes = prevNotes.filter((note) => note.id !== id);
+    const updatedNotesStr = JSON.stringify(updatedNotes, null, 2);
+
+    await writeFileAsync(dbFile, updatedNotesStr);
   }
 
 }
