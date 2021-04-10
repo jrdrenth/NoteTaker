@@ -1,22 +1,37 @@
 [
   {
-    "id": "c2376024-5e1e-41df-806e-0c3348de2d6b",
-    "title": "Walk the dog",
-    "text": "Make sure to walk him at least 30 minutes"
+    "id": "1f55d6a6-e0e8-4770-bd23-c48c5b24525c",
+    "title": "Call bank on Friday",
+    "text": "Call the bank on Friday to verify the account balance"
   },
   {
-    "id": "23005753-692a-4de7-8feb-36ab42ffc811",
-    "title": "Costco Trip",
-    "text": "Pickup groceries/supplies at Costco"
+    "id": "78d115b8-4cd5-41e8-834a-b0c5b20b161e",
+    "title": "Reschedule delivery",
+    "text": "Reschedule the delivery for next week"
   },
   {
-    "id": "10647c36-2570-4083-bbc0-14e24ca88b96",
-    "title": "Change Oil",
-    "text": "Take the Honda in for an oil change and general maintenance"
+    "id": "d64c8459-bddf-4c93-9a22-18cdf345fb79",
+    "title": "Finish payroll",
+    "text": "Finish payroll for the last pay period"
   },
   {
-    "id": "94c2cdf7-e3ea-4ac3-b8ef-d11933e4ed59",
-    "title": "Update clocks",
-    "text": "Change the time on all the clocks for spring forward"
+    "id": "1f7523e6-f6db-4679-8a0b-bbf7e7610a66",
+    "title": "Check in with clients",
+    "text": "Make sure everything is going smooth for them"
+  },
+  {
+    "id": "0d75421d-ebc9-485c-9690-aa61e80ac516",
+    "title": "Client lunch on Thursday",
+    "text": "Treat them to lunch and get latest feedback"
+  },
+  {
+    "id": "3dc925f1-ebca-4395-9fa2-9a59f2bf6b75",
+    "title": "Balance accounts",
+    "text": "Balance account books by end of day Monday"
+  },
+  {
+    "id": "255f44a8-4f0c-423d-ba43-e809469afa57",
+    "title": "Hire new marketing firm",
+    "text": "Hire a new marketing firm for advertising"
   }
 ]
