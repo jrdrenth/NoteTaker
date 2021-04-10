@@ -1,11 +1,13 @@
 const router = require('express').Router();
+const NotesDB = require('../db/notesDB');
 
+const notesDB = new NotesDB();
 
 // ROUTING
 // find all notes
-router.get('/api/notes', async (req, res) => {
+router.get('/notes/', async (req, res) => {
   try {
-    const notes = null;
+    const notes = await notesDB.getAllNotes();
     res.status(200).json(notes);
 
   } catch (err) {
@@ -15,7 +17,7 @@ router.get('/api/notes', async (req, res) => {
 
 
 // create a new note
-router.post('/api/notes', async (req, res) => {
+router.post('/notes', async (req, res) => {
   try {
     const note = null;
     res.status(200).json(note);
@@ -27,7 +29,7 @@ router.post('/api/notes', async (req, res) => {
 
 
 // delete a note by its `id` value
-router.delete('/api/notes:id', async (req, res) => {
+router.delete('/notes:id', async (req, res) => {
   try {
     const result = null;
 
