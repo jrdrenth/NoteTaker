@@ -19,7 +19,7 @@ router.get('/notes/', async (req, res) => {
 // create a new note
 router.post('/notes', async (req, res) => {
   try {
-    const note = null;
+    const note = await notesDB.createNote(req.body);
     res.status(200).json(note);
   
   } catch (err) {
@@ -31,7 +31,7 @@ router.post('/notes', async (req, res) => {
 // delete a note by its `id` value
 router.delete('/notes:id', async (req, res) => {
   try {
-    const result = null;
+    const result = await notesDB.deleteNote(req.params.id);
 
     if (result != 0) {
       res.status(200).json(result);
